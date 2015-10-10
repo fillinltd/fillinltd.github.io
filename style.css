@@ -6,6 +6,7 @@
 body{
     font-family: 'Droid Sans', sans-serif;
     padding-top: 42px;
+    background-image: url(city.png);
 }
 
 #header {
@@ -29,10 +30,31 @@ body{
     position: fixed; 
     top: 42px;
     left : 0; right : 0; bottom: 0; 
+    border-bottom: 12px solid #bf3b58;
 }
 
 #content-ct > div {
     margin: auto;
+}
+
+#menu-ctn {
+    padding-top: 32px;
+    display: flex;
+    position: fixed; 
+    top: 42px;
+    left : 0; right : 0; bottom: 0; 
+    border-bottom: 12px solid #bf3b58;
+    flex-direction: row;
+}
+
+#menu-ctn > div {
+    width: 33%;
+    text-align: center;
+    padding: 4px;
+    height: 100%;
+}
+#menu-ctn > div  img {
+    width: 80%;
 }
 
 #feel {
@@ -44,4 +66,30 @@ body{
 #in {
     margin-left: 18px;
     margin-top: 24px;
+}
+
+.tob {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.tib {
+    display: flex;
+    justify-content: center;
+}
+
+.tib > * {
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.tib > * > img {
+    width: 150%;
+}
+
+.tob img {
+    flex-grow: 1;
+    align-self: flex-end;
+    margin-bottom: 32px;
 }
