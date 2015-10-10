@@ -34,3 +34,14 @@ body{
 #content-ct > div {
     margin: auto;
 }
+
+#feel {
+    margin-left: 14px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+#in {
+    margin-left: 18px;
+    margin-top: 24px;
+}
