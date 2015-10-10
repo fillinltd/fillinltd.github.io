@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes">  
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="apple-touch-startup-image" href="startup.png" />
+    <script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
+  </head>
+  <body>
+    
+    <div id="header">
+        <a href="menu.html" class="btn">Retour</a>
+    </div>
+    
+	<div id="map-ctn">
+    <div id='map'></div>
+	</div>	
+    
+    <div id="seek"><input type="text" value="pizza"></div>
+  
+  
+  <script>
+
+
+   
+
+
+L.mapbox.accessToken = 'pk.eyJ1IjoibnVraSIsImEiOiJjaWZsd245aDAwMTVhdGNseGV4NnVnMjl2In0.IZIdzmWI9XJ0j8OecOuM_w';
+    var geolocate = document.getElementById('geolocate');
+var map = L.mapbox.map('map', 'mapbox.streets').setView([50.7010034, 3.1583723999999997], 25);
+var myLayer = L.mapbox.featureLayer().addTo(map);
+if (!navigator.geolocation) {
+    geolocate.innerHTML = 'Geolocation is not available';
+} else {
+    map.locate();
+}
+L.marker([50.7010034, 3.1583723999999997], {
+    icon: L.mapbox.marker.icon({
+        title: 'Peregrine Espresso',
+        description: '1718 14th St NW, Washington, DC',
+        'marker-size': 'large',
+        'marker-symbol': 'circle-stroked',
+        'marker-color': '#fa0'
+    })
+}).addTo(map);
+
+L.marker([50.70122034, 3.15837239999997], {
+    icon: L.mapbox.marker.icon({
+        'marker-size': 'large',
+        'marker-symbol': 'circle-stroked',
+        'marker-color': '#fB0'
+    })
+}).addTo(map);
+
+L.marker([50.706664, 3.1589999997], {
+    icon: L.mapbox.marker.icon({
+        'marker-size': 'large',
+        'marker-symbol': 'circle-stroked',
+        'marker-color': '#ca3'
+    })
+}).addTo(map);
+
+L.marker([50.700007894, 3.1587736], {
+    icon: L.mapbox.marker.icon({
+        'marker-size': 'large',
+        'marker-symbol': 'circle-stroked',
+        'marker-color': '#2c0'
+    })
+}).addTo(map);
+
+L.marker([50.701061, 3.1583723999999], {
+    icon: L.mapbox.marker.icon({
+        'marker-size': 'large',
+        'marker-symbol': 'circle-stroked',
+        'marker-color': '#ba0'
+    })
+}).addTo(map);
+
+L.marker([50.704061789, 3.258123345999999], {
+    icon: L.mapbox.marker.icon({
+        'marker-size': 'large',
+        'marker-symbol': 'circle-stroked',
+        'marker-color': '#fe0'
+    })
+}).addTo(map);
+
+L.marker([50.7010030, 3.158372], {
+    icon: L.mapbox.marker.icon({
+        'marker-size': 'large',
+        'marker-symbol': 'circle-stroked',
+        'marker-color': '#ff0'
+    })
+}).addTo(map);
+
+</script>
+    
+  </body>
+</html>
